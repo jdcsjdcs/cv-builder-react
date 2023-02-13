@@ -4,6 +4,7 @@ const PersInfo = ({ persForm, handleChange }) => {
             <label htmlFor="name">Name</label>
             <br />
             <input
+                placeholder="Full name"
                 type="text"
                 name="name"
                 value={persForm.name}

@@ -5,21 +5,26 @@
 }
 
 .App {
-   
     display: flex;
-    justify-content: space-between;
-    
 }
-
-
-
-h2 {
+.cv {
     margin: 1rem;
+    position: fixed;
+    right: 0;
+    width: 10.5cm;
+    height: 15cm;
+    background-color: antiquewhite;
 }
+
 
 form {
     margin: 1rem;
 }
 
+.save-btn {
+    margin: 1rem;
+    position:fixed;
+    right: 0;
+    bottom: 0;
 
-
+}

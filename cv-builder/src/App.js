@@ -13,16 +13,14 @@ import {
 import RemoveButton from "./components/buttons/RemoveButton";
 import { edu, exp, pers } from "./components/data";
 import SaveButton from "./components/buttons/SaveButton";
+import Cv from "./components/Cv";
 
 function App() {
     // Personal Data
 
     const [persForm, setPersForm] = useState({ ...pers });
 
-    const handleSavePersForm = (e) => {
-        e.preventDefault();
-        localStorage.setItem("persFormData", JSON.stringify(persForm));
-    };
+
 
     useEffect(() => {
         const storedData = localStorage.getItem("persFormData");
@@ -33,10 +31,7 @@ function App() {
     // Experiences
     const [expForms, setExpForms] = useState([{ ...exp }]);
 
-    const handleSaveExpForm = (e) => {
-        e.preventDefault();
-        localStorage.setItem("expFormData", JSON.stringify(expForms));
-    };
+  
 
     useEffect(() => {
         const storedData = localStorage.getItem("expFormData");
@@ -47,15 +42,19 @@ function App() {
     // Education
     const [eduForms, setEduForms] = useState([{ ...edu }]);
 
-    const handleSaveEduForm = (e) => {
-        e.preventDefault();
-        localStorage.setItem("eduFormData", JSON.stringify(eduForms));
-    };
+  
 
     useEffect(() => {
         const storedData = localStorage.getItem("eduFormData");
         storedData && setEduForms(JSON.parse(storedData));
     }, []);
+
+    const handleSaveForm = (e) => {
+        e.preventDefault();
+        localStorage.setItem("persFormData", JSON.stringify(persForm))
+        localStorage.setItem("expFormData", JSON.stringify(expForms))
+        localStorage.setItem("eduFormData", JSON.stringify(eduForms))
+    };
 
     // const[test2Value, setTest2Value] = useState([{field1:'', field2:''}])
     // const handleTest2OnChange = (e, id) => {
@@ -85,7 +84,7 @@ function App() {
                     persForm={persForm}
                     handleChange={(e) => handleChange(e, persForm, setPersForm)}
                 />
-                <SaveButton saveForm={handleSavePersForm} />
+             
 
                 <h2>Experiences</h2>
 
@@ -113,7 +112,7 @@ function App() {
                 <AddButton
                     addForm={() => handleAddForm(exp, expForms, setExpForms)}
                 />
-                <button onClick={handleSaveExpForm}>Save</button>
+                
 
                 <h2>Education</h2>
 
@@ -142,39 +141,21 @@ function App() {
                 <AddButton
                     addForm={() => handleAddForm(edu, eduForms, setEduForms)}
                 />
-                <SaveButton saveForm={handleSaveEduForm} />
+             
             </div>
 
-            <div>
-                <p>{persForm.name}</p>
-                <p>{persForm.email}</p>
-                <p>{persForm.phone}</p>
+            <div className="cv">
+                <div>
+                <Cv persForm={persForm} expForms={expForms} eduForms={eduForms} />
+                </div>
+                <div className="save-btn">
+                <SaveButton saveForm={handleSaveForm} />
+                </div>
             </div>
-
-            <div className="cv-view">
-                {expForms.map((form, index) => (
-                    <div key={index}>
-                        {form.jobTitle && <p>Job title:{form.jobTitle}</p>}
-                        {form.jobDescription && (
-                            <p>Job description:{form.jobDescription}</p>
-                        )}
-                    </div>
-                ))}
-            </div>
-
-            <div>
-                {eduForms.map((form, index) => (
-                    <div className="cv" key={index}>
-                        <p>{form.startDate}</p>
-                        <p>{form.endDate}</p>
-                        <p>{form.institution}</p>
-                        <p>{form.qualification}</p>
-                    </div>
-                ))}
-            </div>
-
            
-           
+            
+            
+          
         </div>
     );
 }

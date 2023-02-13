@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+   
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+
+h2 {
+    margin: 1rem;
+}
+
+form {
+    margin: 1rem;
+}
+
+
+

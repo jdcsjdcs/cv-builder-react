@@ -3,28 +3,165 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: #212529;
+    color: #f8f9fa;
+    margin: 1rem;
+
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.8rem;
+    /* font-family: "Manrope", sans-serif; */
+}
 
 .App {
     display: flex;
 }
-.cv {
-    margin: 1rem;
-    position: fixed;
-    right: 0;
-    width: 10.5cm;
-    height: 15cm;
-    background-color: antiquewhite;
+label {
+    margin: 0.3rem;
+}
+input {
+    margin: 0.2rem;
+    font-size: 0.7rem;
+    width: 7rem;
 }
 
-
-form {
-    margin: 1rem;
+.form {
+    width: 25%;
+    /* background-color: rgb(174, 131, 76); */
 }
 
 .save-btn {
     margin: 1rem;
-    position:fixed;
+    position: fixed;
     right: 0;
     bottom: 0;
+}
+
+
+
+.exp,
+.edu,
+.pers,
+.cert,
+.skill,
+.lang,
+.profi {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #343a40;
+    border-radius: 5px;
+    padding: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.remove-btn {
+    width: 1rem;
+    height: 1rem;
+    border: none;
+    background-color: #343a40;
+    color: antiquewhite;
+}
+
+button {
+    padding: 0.2rem 1rem;
+    font-size: 0.8rem;
+}
+
+
+.hide {
+    display: none;
+}
+
+/* --------------- CV part --------------- */
+
+.cv {
+    position: fixed;
+    right: 2rem;
+    zoom: 50%;
+}
+
+.print {
+    padding: 2rem;
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    background-color: #ced4da;
+    color: black;
+    font-family: "Inconsolata", monospace;
+}
+
+.header {
+    display: flex;
+    margin: 0 0 3rem 3rem;
+}
+
+.name-prof {
+    width: 80%;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.main {
+    display: flex;
+    
+    
+}
+
+.left {
+    width: 55%;
+    border-right: black solid 1px;
+}
+
+.right {
+    width: 45%;
+}
+
+
+
+h3 {
+    font-size: 2rem;
+    margin: 1rem 2rem;
+    border-bottom:  black solid 1px;
+    padding: 1rem;
+}
+
+h5 {
+    font-size: 1.5rem;
+}
+
+.profile {
+    margin: 2rem;
 
 }
+
+.experiences, .education  {
+    display: flex;
+    margin: 1rem 2rem;
+    gap: 1rem;
+}
+
+.skills {
+    margin: 0.5rem 2rem;
+}
+
+.exp-city {
+    margin-left: auto;
+}
+
+.job-description {
+    margin: 0 2rem;
+}
+
+
+
+.languages, .certification {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 2rem;
+}
+
+
+

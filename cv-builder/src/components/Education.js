@@ -4,7 +4,8 @@ const Education = ({ eduForms, handleInputChange }) => {
             <label htmlFor="startMonths">Start date</label>
             <br />
             <input
-                type="date"
+                placeholder="dfgsdgsd"
+                type="month"
                 name="startDate"
                 value={eduForms.startDate}
                 onChange={handleInputChange}
@@ -13,7 +14,7 @@ const Education = ({ eduForms, handleInputChange }) => {
             <label htmlFor="endMonths">End date</label>
             <br />
             <input
-                type="date"
+                type="month"
                 name="endDate"
                 value={eduForms.endDate}
                 onChange={handleInputChange}

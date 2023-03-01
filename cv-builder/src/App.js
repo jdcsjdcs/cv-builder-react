@@ -221,13 +221,13 @@ function App() {
                         />
                     </div>
                 ))}
-                <div className="add-btn">
+               
                     <AddButton
                         addForm={() =>
                             handleAddForm(cert, certForms, setCertForms)
                         }
                     />
-                </div>
+              
 
             <h4>Skills</h4>
 
@@ -252,13 +252,13 @@ function App() {
                         />
                     </div>
                 ))}
-                <div className="add-btn">
+              
                     <AddButton
                         addForm={() =>
                             handleAddForm(skill, skillForms, setSkillForms)
                         }
                     />
-                </div>
+               
 
                 <h4>Languages</h4>
 

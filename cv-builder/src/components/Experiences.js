@@ -1,7 +1,7 @@
 const Experiences = ({ expForms, handleInputChange }) => {
     return (
-        <div >
-            
+        <div className="exp-f">
+            <div>
                 <label htmlFor="startMonths">Start date</label>
                 <br />
                 <input
@@ -10,7 +10,10 @@ const Experiences = ({ expForms, handleInputChange }) => {
                     value={expForms.startDate}
                     onChange={handleInputChange}
                 />
-                <br />
+            </div>
+
+            <div>
+                {" "}
                 <label htmlFor="endMonths">End date</label>
                 <br />
                 <input
@@ -19,7 +22,9 @@ const Experiences = ({ expForms, handleInputChange }) => {
                     value={expForms.endDate}
                     onChange={handleInputChange}
                 />
-                <br />
+            </div>
+
+            <div>
                 <label htmlFor="jobTitle">Job title</label>
                 <br />
                 <input
@@ -28,8 +33,9 @@ const Experiences = ({ expForms, handleInputChange }) => {
                     value={expForms.jobTitle}
                     onChange={handleInputChange}
                 />
-              
-                <br />
+            </div>
+
+            <div>
                 <label htmlFor="city">City</label>
                 <br />
                 <input
@@ -38,7 +44,8 @@ const Experiences = ({ expForms, handleInputChange }) => {
                     value={expForms.city}
                     onChange={handleInputChange}
                 />
-                <br />
+            </div>
+            <div>
                 <label htmlFor="employer">Employer</label>
                 <br />
                 <input
@@ -47,7 +54,10 @@ const Experiences = ({ expForms, handleInputChange }) => {
                     value={expForms.employer}
                     onChange={handleInputChange}
                 />
-                  <br />
+            </div>
+
+            <div>
+                {" "}
                 <label htmlFor="jobDescription">Job description</label>
                 <br />
                 <input
@@ -56,7 +66,7 @@ const Experiences = ({ expForms, handleInputChange }) => {
                     value={expForms.jobDescription}
                     onChange={handleInputChange}
                 />
-            
+            </div>
         </div>
     );
 };

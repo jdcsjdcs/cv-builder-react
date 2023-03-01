@@ -1,6 +1,6 @@
 const Profile = ({ profileForm, handleChange }) => {
     return (
-        <div>
+       
            
                 <textarea
                     value={profileForm.profile}
@@ -8,7 +8,7 @@ const Profile = ({ profileForm, handleChange }) => {
                     name="profile"
                 />
             
-        </div>
+        
     );
 };
 

@@ -21,10 +21,10 @@ const Cv = forwardRef(
                         <h5>{persForm.prof}</h5>
                     </div>
                     <div className="info">
-                        <p>{persForm.address}</p>
-                        <p>{persForm.email}</p>
-                        <p>{persForm.phone}</p>
-                        <p>{persForm.web}</p>
+                        {persForm.address && <p>🖈 {persForm.address}</p>}
+                        {persForm.email && <p>&#9993; {persForm.email}</p>}
+                        {persForm.phone && <p>&#9743; {persForm.phone}</p>}
+                        {persForm.web && <p>&#x1F30E; {persForm.web}</p>}
                     </div>
                 </div>
 
@@ -46,7 +46,9 @@ const Cv = forwardRef(
                                             <div>{form.endDate}</div>
                                         </div>
                                         <div className="exp-title-emp">
-                                            <p>{form.jobTitle}</p>
+                                            <p className="job-title">
+                                                {form.jobTitle}
+                                            </p>
 
                                             <p>{form.employer}</p>
                                         </div>
@@ -54,7 +56,11 @@ const Cv = forwardRef(
                                             <p>{form.city}</p>
                                         </div>
                                     </div>
-                                    <p className="job-description">{form.jobDescription}</p>
+                                    {form.jobDescription && (
+                                        <p className="job-description">
+                                            &#9679; {form.jobDescription}
+                                        </p>
+                                    )}
                                 </div>
                             ))}
                         </div>
@@ -70,8 +76,10 @@ const Cv = forwardRef(
                                             <p>{form.endDate}</p>
                                         </div>
                                         <div className="edu-inst-qual">
+                                            <p className="qualification">
+                                                {form.qualification}
+                                            </p>
                                             <p>{form.institution}</p>
-                                            <p>{form.qualification}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -82,7 +90,7 @@ const Cv = forwardRef(
                                 <div key={index}>
                                     {index === 0 && <h3>Certification</h3>}
                                     <div className="certification">
-                                        <p>{form.title}</p>
+                                        <p className="title">{form.title}</p>
                                         <p>{form.institution}</p>
                                     </div>
                                 </div>
@@ -93,7 +101,9 @@ const Cv = forwardRef(
                                 <div key={index}>
                                     {index === 0 && <h3>Skills</h3>}
                                     <div className="skills">
-                                        <p>{form.skill}</p>
+                                        {form.skill && (
+                                            <p>&#9679; {form.skill}</p>
+                                        )}
                                     </div>
                                 </div>
                             ))}

@@ -21,10 +21,10 @@ const Cv = forwardRef(
                         <h5>{persForm.prof}</h5>
                     </div>
                     <div className="info">
-                        {persForm.address && <p>🖈 {persForm.address}</p>}
-                        {persForm.email && <p>&#9993; {persForm.email}</p>}
-                        {persForm.phone && <p>&#9743; {persForm.phone}</p>}
-                        {persForm.web && <p>&#x1F30E; {persForm.web}</p>}
+                        {persForm.address && <p> {persForm.address} 🖈</p>}
+                        {persForm.email && <p> {persForm.email} &#9993;</p>}
+                        {persForm.phone && <p> {persForm.phone} &#9743;</p>}
+                        {persForm.web && <p> {persForm.web} &#x1F30E;</p>}
                     </div>
                 </div>
 

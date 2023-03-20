@@ -20,6 +20,7 @@ import Skills from "./components/Skills";
 import Languages from "./components/Languages";
 import Profile from "./components/Profile";
 
+
 function App() {
     const componentRef = useRef();
 
